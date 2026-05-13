@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>POLIPONI 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>POLIPONI 2026 BALI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,362 +18,310 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5f6fb;
+background:#f4f5f7;
 color:#111;
-padding-bottom:130px;
+padding-bottom:120px;
 }
 
-.header{
-background:#1e40ff;
-padding:18px 16px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-position:sticky;
-top:0;
-z-index:999;
-box-shadow:0 4px 15px rgba(0,0,0,0.12);
-}
-
-.logo{
-font-size:32px;
-font-weight:700;
-color:white;
-}
-
-.header-icons{
-display:flex;
-gap:12px;
-}
-
-.icon-btn{
-width:46px;
-height:46px;
-border-radius:50%;
-background:rgba(255,255,255,0.15);
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:20px;
-backdrop-filter:blur(5px);
-}
-
-.banner img{
+.banner{
 width:100%;
 display:block;
+object-fit:cover;
+border-radius:0 0 28px 28px;
 }
 
 .container{
-padding:22px;
+padding:18px;
 }
 
 .badge{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:10px 16px;
-background:#e8ecff;
-color:#3d5afe;
-border-radius:14px;
-font-weight:600;
-margin-bottom:18px;
+background:#e8f0ff;
+color:#1b3fd1;
+font-size:12px;
+font-weight:700;
+display:inline-block;
+padding:8px 14px;
+border-radius:50px;
+margin-bottom:14px;
 }
 
 .title{
-font-size:38px;
-font-weight:700;
-line-height:1.2;
-margin-bottom:24px;
-}
-
-.section-title{
-font-size:30px;
-font-weight:700;
-margin-bottom:20px;
-}
-
-.detail-box{
-display:flex;
-gap:16px;
-margin-bottom:20px;
-align-items:flex-start;
-}
-
-.detail-icon{
-width:46px;
-height:46px;
-border-radius:14px;
-background:#e8ecff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-color:#4169ff;
-flex-shrink:0;
-}
-
-.detail-text{
 font-size:24px;
-font-weight:500;
-line-height:1.5;
-}
-
-.organizer{
-margin-top:30px;
-}
-
-.organizer img{
-width:70px;
+font-weight:800;
+line-height:1.4;
 margin-bottom:10px;
 }
 
-.organizer-name{
-font-size:28px;
-font-weight:600;
-}
-
-.social-title{
-margin-top:34px;
-font-size:24px;
-font-weight:600;
-margin-bottom:14px;
-color:#6b7280;
-}
-
-.socials{
-display:flex;
-gap:14px;
-margin-bottom:30px;
-}
-
-.social-btn{
-background:#eef2ff;
-padding:14px 18px;
-border-radius:18px;
-font-size:24px;
-font-weight:600;
-color:#3d5afe;
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.tabs{
-display:flex;
-gap:30px;
-border-bottom:2px solid #e5e7eb;
-margin-bottom:28px;
-overflow:auto;
-}
-
-.tab{
-padding-bottom:14px;
-font-size:24px;
-font-weight:500;
-color:#6b7280;
-white-space:nowrap;
-}
-
-.tab.active{
-color:#111;
-border-bottom:4px solid #4169ff;
-}
-
-.content h2{
-font-size:34px;
+.location{
+font-size:14px;
+color:#666;
 margin-bottom:18px;
 }
 
-.content p{
-font-size:25px;
-line-height:1.8;
-margin-bottom:24px;
+.info-box{
+background:#fff;
+border-radius:20px;
+padding:18px;
+margin-bottom:18px;
+box-shadow:0 4px 18px rgba(0,0,0,0.05);
 }
 
-.content li{
-font-size:24px;
+.info-title{
+font-size:18px;
+font-weight:700;
+margin-bottom:14px;
+}
+
+.info-text{
+font-size:14px;
 line-height:1.9;
-margin-bottom:16px;
-margin-left:24px;
+color:#444;
 }
 
-.bottom-card{
+.section{
+background:#fff;
+padding:20px;
+border-radius:22px;
+margin-bottom:18px;
+box-shadow:0 4px 18px rgba(0,0,0,0.05);
+}
+
+.section h2{
+font-size:18px;
+margin-bottom:14px;
+font-weight:700;
+}
+
+.section p{
+font-size:14px;
+line-height:1.9;
+margin-bottom:14px;
+color:#444;
+}
+
+.section ul{
+padding-left:20px;
+}
+
+.section li{
+margin-bottom:12px;
+font-size:14px;
+line-height:1.8;
+color:#444;
+}
+
+.highlight{
+color:#1b3fd1;
+font-weight:700;
+}
+
+.warning{
+background:#fff3cd;
+border:1px solid #ffe08a;
+padding:16px;
+border-radius:18px;
+font-size:13px;
+line-height:1.8;
+color:#8a6d3b;
+margin-top:18px;
+}
+
+.bottom-bar{
 position:fixed;
 bottom:0;
 left:0;
 right:0;
-background:white;
-padding:18px;
-box-shadow:0 -6px 20px rgba(0,0,0,0.1);
-border-top-left-radius:28px;
-border-top-right-radius:28px;
-}
-
-.bottom-wrap{
-background:#f3f4f6;
-border-radius:24px;
-padding:20px;
-}
-
-.price-row{
+background:#fff;
+padding:14px 18px;
+box-shadow:0 -4px 18px rgba(0,0,0,0.08);
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:18px;
-}
-
-.price-label{
-font-size:24px;
-color:#9ca3af;
+z-index:999;
 }
 
 .price{
-font-size:34px;
-font-weight:700;
-}
-
-.buy-btn{
-width:100%;
-height:74px;
-border:none;
-border-radius:20px;
-background:#3d5afe;
-color:white;
-font-size:28px;
-font-weight:700;
-cursor:pointer;
-transition:0.3s;
-}
-
-.buy-btn:active{
-transform:scale(0.98);
-}
-
-@media(max-width:480px){
-.title{
-font-size:30px;
-}
-
-.section-title{
-font-size:26px;
-}
-
-.detail-text,
-.content p,
-.content li{
-font-size:18px;
-}
-
-.content h2{
-font-size:28px;
-}
-
-.social-btn,
-.tab,
-.organizer-name{
-font-size:18px;
-}
-
-.price{
-font-size:28px;
-}
-
-.buy-btn{
 font-size:22px;
-height:62px;
+font-weight:800;
+color:#111;
 }
+
+.price span{
+display:block;
+font-size:12px;
+color:#777;
+font-weight:500;
 }
+
+.buy-btn{
+background:#1b3fd1;
+color:#fff;
+text-decoration:none;
+padding:14px 28px;
+border-radius:16px;
+font-size:15px;
+font-weight:700;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.sold-box{
+background:#ffefef;
+padding:16px;
+border-radius:18px;
+margin-bottom:18px;
+border:1px solid #ffcaca;
+text-align:center;
+}
+
+.sold-text{
+font-size:14px;
+font-weight:700;
+color:#d62828;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0.4;}
+100%{opacity:1;}
+}
+
+.divider{
+height:1px;
+background:#eee;
+margin:18px 0;
+}
+
 </style>
 </head>
 <body>
 
-<div class="header">
-<div class="logo">Artatix</div>
-<div class="header-icons">
-<div class="icon-btn">🌐</div>
-<div class="icon-btn">🔍</div>
-<div class="icon-btn">☰</div>
-</div>
-</div>
-
-<div class="banner">
-<img src="https://files.catbox.moe/1n4f6w.jpg" alt="banner">
-</div>
+<img src="banner-deskripsi.png" class="banner">
 
 <div class="container">
 
-<div class="badge">🎵 Musik</div>
-
-<div class="title">Poliponi 2026 - Malang</div>
-
-<div class="section-title">Detail Acara</div>
-
-<div class="detail-box">
-<div class="detail-icon">📅</div>
-<div class="detail-text">20 Juni 2026</div>
+<div class="badge">
+OPEN TIKET BUNDLING POLIPONI 2026
 </div>
 
-<div class="detail-box">
-<div class="detail-icon">🕒</div>
-<div class="detail-text">14:00 - 23:00</div>
+<div class="title">
+Pekan Olahraga dan Seni Politeknik Nasional 2026 Bali
 </div>
 
-<div class="detail-box">
-<div class="detail-icon">📍</div>
-<div class="detail-text">Lapangan Rampal, Malang, Jawa Timur</div>
+<div class="location">
+📍 Bali International Convention Center • Bali, Indonesia
 </div>
 
-<div class="organizer">
-<div class="section-title">Penyelenggara</div>
-<img src="https://files.catbox.moe/aq5g5w.png">
-<div class="organizer-name">PT. AMAZING LETRALIVE</div>
+<div class="sold-box">
+<div class="sold-text">
+🔥 Tiket Bundling Hampir Habis • Tersisa Sedikit Slot Hari Ini
+</div>
 </div>
 
-<div class="social-title">Media Sosial</div>
+<div class="info-box">
 
-<div class="socials">
-<div class="social-btn">📸 Instagram</div>
-<div class="social-btn">🎵 TikTok</div>
+<div class="info-title">
+Tentang Event
 </div>
 
-<div class="tabs">
-<div class="tab active">Deskripsi</div>
-<div class="tab">Syarat & Ketentuan</div>
-<div class="tab">Fasilitas</div>
+<div class="info-text">
+POLIPONI 2026 merupakan ajang nasional mahasiswa politeknik terbesar di Indonesia yang mempertemukan ribuan peserta dari berbagai wilayah dalam kompetisi olahraga, seni, kreativitas, dan inovasi mahasiswa tingkat nasional.
+
+Acara ini akan diselenggarakan di Bali dan menghadirkan rangkaian kegiatan kompetitif, hiburan, pertunjukan seni budaya, festival mahasiswa, networking antar kampus, hingga kegiatan ceremonial nasional dengan konsep modern dan profesional.
+
+Melalui pembelian tiket bundling ini, peserta akan mendapatkan akses ke berbagai rangkaian kegiatan utama selama event berlangsung sesuai dengan kategori tiket yang dipilih.
 </div>
 
-<div class="content">
-<h2>Deskripsi</h2>
+</div>
+
+<div class="section">
+
+<h2>Deskripsi Kegiatan</h2>
+
 <p>
-POLIPONI adalah konser musik spektakuler yang menghadirkan pengalaman terbaik untuk menikmati pertunjukan artis populer Indonesia.
-Dengan konsep modern dan tata panggung megah, acara ini siap memberikan pengalaman konser yang berkesan.
+Event <span class="highlight">POLIPONI 2026 BALI</span> menjadi momentum besar bagi mahasiswa politeknik seluruh Indonesia untuk berkumpul, berkompetisi, dan memperluas relasi antar institusi pendidikan vokasi.
 </p>
 
-<h2>Syarat & Ketentuan</h2>
+<p>
+Kegiatan akan berlangsung selama beberapa hari dengan menghadirkan berbagai cabang olahraga, festival seni mahasiswa, penampilan spesial, bazar kreatif mahasiswa, showcase teknologi, dan kegiatan hiburan lainnya yang dikemas secara profesional.
+</p>
 
-<ol>
-<li>Tiket resmi hanya dijual melalui website resmi penyelenggara.</li>
-<li>Satu tiket berlaku untuk satu orang.</li>
-<li>Maksimal pembelian 4 tiket dalam 1 transaksi.</li>
-<li>Pengunjung wajib menjaga ketertiban selama acara berlangsung.</li>
-<li>Dilarang membawa barang berbahaya ke area venue.</li>
-</ol>
+<p>
+Peserta yang telah melakukan registrasi tiket bundling akan memperoleh akses masuk area event sesuai jadwal dan ketentuan panitia yang berlaku.
+</p>
+
+<p>
+Panitia menyediakan sistem registrasi digital modern guna mempermudah proses verifikasi peserta dan pengunjung selama kegiatan berlangsung.
+</p>
+
+<div class="divider"></div>
+
+<h2>Fasilitas Tiket Bundling</h2>
+
+<ul>
+<li>Akses masuk area event POLIPONI 2026</li>
+<li>ID Digital Registrasi Event</li>
+<li>E-Sertifikat peserta/pengunjung</li>
+<li>Akses festival hiburan mahasiswa</li>
+<li>Dokumentasi dan media publikasi event</li>
+<li>Kesempatan mengikuti berbagai aktivitas umum event</li>
+<li>Support layanan registrasi online</li>
+<li>Akses informasi jadwal kegiatan event</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Syarat dan Ketentuan</h2>
+
+<ul>
+<li>Peserta wajib melakukan registrasi menggunakan data yang benar dan valid.</li>
+
+<li>Tiket yang telah dibeli tidak dapat dibatalkan ataupun diuangkan kembali.</li>
+
+<li>Panitia berhak melakukan verifikasi data peserta sewaktu-waktu apabila diperlukan.</li>
+
+<li>Peserta wajib menjaga ketertiban, keamanan, dan mematuhi seluruh aturan yang berlaku selama kegiatan berlangsung.</li>
+
+<li>Dilarang membawa barang berbahaya, narkotika, senjata tajam, ataupun benda terlarang lainnya ke area event.</li>
+
+<li>Peserta diwajibkan menjaga kebersihan area kegiatan dan menghormati seluruh peserta lainnya.</li>
+
+<li>Panitia tidak bertanggung jawab atas kehilangan barang pribadi peserta selama kegiatan berlangsung.</li>
+
+<li>Seluruh dokumentasi foto dan video selama event berlangsung dapat digunakan untuk kebutuhan publikasi resmi kegiatan.</li>
+
+<li>Peserta wajib menunjukkan bukti registrasi atau tiket digital saat proses check-in event.</li>
+
+<li>Dengan melakukan pembelian tiket bundling, peserta dianggap telah membaca dan menyetujui seluruh syarat dan ketentuan yang berlaku.</li>
+</ul>
+
+<div class="warning">
+⚠️ INFORMASI PENTING: Tiket bundling memiliki kuota terbatas dan dapat ditutup sewaktu-waktu apabila kapasitas peserta telah terpenuhi.
 </div>
 
 </div>
 
-<div class="bottom-card">
-<div class="bottom-wrap">
-<div class="price-row">
-<div class="price-label">Harga mulai dari</div>
-<div class="price">Rp320.000</div>
 </div>
 
-<button class="buy-btn" onclick="window.location.href='https://linkanda.com'">
-🎟️ Beli Tiket
-</button>
+<div class="bottom-bar">
+
+<div class="price">
+Rp95.000
+<span>Tiket Bundling</span>
 </div>
+
+<a href="#" class="buy-btn">
+Beli Tiket
+</a>
+
 </div>
 
 </body>
