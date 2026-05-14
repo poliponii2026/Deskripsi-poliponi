@@ -1,411 +1,443 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POLIPONI 2026 - BALI</title>
 
-<title>OPEN PAKET BUNDLING SHEILA ON 7 BALI 2026</title>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+  <!-- ICON -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-body{
-background:#f5f5f5;
-color:#111;
-}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
-.container{
-max-width:700px;
-margin:auto;
-background:#fff;
-min-height:100vh;
-}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0b0b0b;
+      color:white;
+      overflow-x:hidden;
+    }
 
-.banner{
-width:100%;
-display:block;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-.content{
-padding:18px;
-}
+    .container{
+      width:100%;
+      max-width:900px;
+      margin:auto;
+      background:#121212;
+      min-height:100vh;
+    }
 
-.event-badge{
-display:inline-block;
-background:#ff4d00;
-color:#fff;
-font-weight:bold;
-padding:8px 14px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:14px;
-}
+    /* BANNER */
+    .banner{
+      width:100%;
+      position:relative;
+    }
 
-h1{
-font-size:28px;
-line-height:1.3;
-font-weight:900;
-margin-bottom:14px;
-}
+    .banner img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
 
-.subtitle{
-font-size:15px;
-line-height:1.7;
-color:#444;
-margin-bottom:20px;
-}
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.9), transparent);
+    }
 
-.info-box{
-background:#fafafa;
-border:2px solid #111;
-border-radius:18px;
-padding:18px;
-margin-bottom:22px;
-}
+    .title-box{
+      position:absolute;
+      bottom:25px;
+      left:25px;
+    }
 
-.info-item{
-margin-bottom:14px;
-}
+    .title-box h1{
+      font-size:38px;
+      font-weight:800;
+      line-height:1.1;
+    }
 
-.info-item:last-child{
-margin-bottom:0;
-}
+    .title-box span{
+      color:#00d4ff;
+    }
 
-.label{
-font-size:12px;
-font-weight:bold;
-color:#777;
-margin-bottom:5px;
-text-transform:uppercase;
-}
+    /* SECTION */
+    section{
+      padding:28px 22px;
+    }
 
-.value{
-font-size:16px;
-font-weight:700;
-}
+    .card{
+      background:#1a1a1a;
+      border-radius:22px;
+      padding:22px;
+      margin-bottom:20px;
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 0 20px rgba(0,0,0,.25);
+    }
 
-.section{
-margin-bottom:28px;
-}
+    .section-title{
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
 
-.section h2{
-font-size:22px;
-margin-bottom:15px;
-font-weight:900;
-}
+    /* DETAIL */
+    .detail-item{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:18px;
+    }
 
-.section p{
-font-size:15px;
-line-height:1.9;
-margin-bottom:14px;
-color:#333;
-}
+    .detail-item i{
+      width:45px;
+      height:45px;
+      background:#00d4ff;
+      color:#000;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:18px;
+      font-weight:bold;
+      flex-shrink:0;
+    }
 
-.rules{
-padding-left:20px;
-}
+    .detail-item h4{
+      font-size:15px;
+      opacity:.7;
+      margin-bottom:3px;
+    }
 
-.rules li{
-margin-bottom:14px;
-line-height:1.8;
-font-size:15px;
-}
+    .detail-item p{
+      font-size:17px;
+      font-weight:600;
+    }
 
-.highlight{
-background:#fff200;
-padding:2px 6px;
-font-weight:bold;
-}
+    /* PENYELENGGARA */
+    .organizer{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
-.fake-wait{
-background:#111;
-color:#fff;
-padding:18px;
-border-radius:16px;
-text-align:center;
-margin-bottom:25px;
-}
+    .organizer-logo{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      background:#00d4ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:black;
+      font-weight:800;
+      font-size:12px;
+    }
 
-.fake-wait h3{
-font-size:18px;
-margin-bottom:8px;
-}
+    /* SOSMED */
+    .socials{
+      display:flex;
+      gap:18px;
+      margin-top:10px;
+    }
 
-.fake-time{
-font-size:40px;
-font-weight:900;
-color:#00ff66;
-margin-top:10px;
-}
+    .socials a{
+      width:55px;
+      height:55px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      background:#1f1f1f;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,.07);
+    }
 
-.buy-btn{
-display:block;
-width:100%;
-text-align:center;
-background:#ff4d00;
-color:#fff;
-text-decoration:none;
-padding:18px;
-font-size:20px;
-font-weight:900;
-border-radius:16px;
-margin-top:20px;
-box-shadow:0 8px 0 #c93800;
-transition:0.2s;
-}
+    .socials a:hover{
+      transform:translateY(-4px);
+      background:#00d4ff;
+      color:black;
+    }
 
-.buy-btn:active{
-transform:translateY(4px);
-box-shadow:0 4px 0 #c93800;
-}
+    /* NAV TAB */
+    .menu-tabs{
+      display:flex;
+      gap:12px;
+      overflow:auto;
+      margin-bottom:20px;
+    }
 
-.footer{
-text-align:center;
-padding:30px 20px;
-font-size:13px;
-color:#777;
-line-height:1.8;
-}
+    .menu-tabs a{
+      background:#1f1f1f;
+      padding:14px 20px;
+      border-radius:16px;
+      white-space:nowrap;
+      font-size:14px;
+      font-weight:600;
+      border:1px solid rgba(255,255,255,.05);
+      transition:.3s;
+    }
 
-@media(max-width:600px){
+    .menu-tabs a:hover{
+      background:#00d4ff;
+      color:black;
+    }
 
-h1{
-font-size:24px;
-}
+    /* CONTENT */
+    .content-box{
+      background:#181818;
+      border-radius:20px;
+      padding:24px;
+      margin-bottom:20px;
+      border:1px solid rgba(255,255,255,.06);
+    }
 
-.section h2{
-font-size:20px;
-}
+    .content-box h2{
+      margin-bottom:16px;
+      font-size:24px;
+    }
 
-.buy-btn{
-font-size:18px;
-padding:16px;
-}
+    .content-box p{
+      line-height:1.8;
+      opacity:.92;
+    }
 
-.fake-time{
-font-size:34px;
-}
+    ul{
+      padding-left:20px;
+      line-height:2;
+    }
 
-}
-</style>
+    /* FASILITAS */
+    .facility-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .facility{
+      background:#202020;
+      border-radius:20px;
+      padding:22px 14px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.06);
+      transition:.3s;
+    }
+
+    .facility:hover{
+      transform:translateY(-5px);
+      background:#00d4ff;
+      color:black;
+    }
+
+    .facility i{
+      font-size:32px;
+      margin-bottom:12px;
+    }
+
+    .facility h4{
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      opacity:.5;
+      font-size:13px;
+    }
+
+    @media(max-width:600px){
+      .title-box h1{
+        font-size:28px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<img src="banner-deskripsi.png" class="banner">
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="banner-saya.png" alt="Banner Event">
+    <div class="overlay"></div>
 
-<div class="content">
+    <div class="title-box">
+      <h1>POLIPONI 2026 <span>- BALI</span></h1>
+    </div>
+  </div>
 
-<div class="event-badge">
-OPEN PAKET BUNDLING 2026
+  <!-- DETAIL ACARA -->
+  <section>
+    <div class="card">
+      <div class="section-title">DETAIL ACARA</div>
+
+      <div class="detail-item">
+        <i class="fa-solid fa-calendar"></i>
+        <div>
+          <h4>Tanggal</h4>
+          <p>04 Juli 2026</p>
+        </div>
+      </div>
+
+      <div class="detail-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Jam</h4>
+          <p>14.00 - 23.00 WITA</p>
+        </div>
+      </div>
+
+      <div class="detail-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Lokasi</h4>
+          <p>BALI UNITED TRAINING CENTER</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PENYELENGGARA -->
+    <div class="card">
+      <div class="section-title">PENYELENGGARA</div>
+
+      <div class="organizer">
+        <div class="organizer-logo">AL</div>
+        <div>
+          <h3>PT. AMAZING LETRALIVE</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOSMED -->
+    <div class="card">
+      <div class="section-title">MEDIA SOSIAL</div>
+
+      <div class="socials">
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-tabs">
+      <a href="#deskripsi">DESKRIPSI</a>
+      <a href="#syarat">SYARAT & KETENTUAN</a>
+      <a href="#fasilitas">FASILITAS</a>
+    </div>
+
+    <!-- DESKRIPSI -->
+    <div class="content-box" id="deskripsi">
+      <h2>DESKRIPSI</h2>
+
+      <p>
+        POLIPONI 2026 hadir sebagai salah satu festival musik paling meriah di Bali 
+        dengan menghadirkan line-up terbaik Indonesia seperti Sheila On 7, Hindia, 
+        Feast, 510, dan Dialog Dini Hari.
+      </p>
+
+      <br>
+
+      <p>
+        Event ini akan diselenggarakan di Bali United Training Center pada 
+        tanggal 04 Juli 2026 mulai pukul 14.00 WITA hingga selesai. 
+        Nikmati pengalaman konser spektakuler dengan tata panggung modern, 
+        lighting megah, area kuliner, merchandise official, dan berbagai 
+        aktivitas seru lainnya.
+      </p>
+
+      <br>
+
+      <p>
+        Jangan lewatkan momen spesial bersama ribuan penonton lainnya 
+        dalam festival musik POLIPONI 2026 - BALI.
+      </p>
+    </div>
+
+    <!-- SYARAT -->
+    <div class="content-box" id="syarat">
+      <h2>SYARAT & KETENTUAN</h2>
+
+      <ul>
+        <li>Tiket yang sudah dibeli tidak dapat dikembalikan.</li>
+        <li>Wajib menunjukkan e-ticket saat penukaran tiket.</li>
+        <li>Penonton wajib menjaga keamanan dan ketertiban acara.</li>
+        <li>Dilarang membawa senjata tajam, narkoba, dan minuman keras.</li>
+        <li>Dilarang membawa makanan dan minuman dari luar venue.</li>
+        <li>Pihak penyelenggara berhak menolak masuk apabila melanggar aturan.</li>
+        <li>Tiket hanya berlaku untuk 1 orang.</li>
+        <li>Pengunjung wajib mengikuti seluruh peraturan venue.</li>
+        <li>Acara dapat berubah sewaktu-waktu sesuai kondisi.</li>
+      </ul>
+    </div>
+
+    <!-- FASILITAS -->
+    <div class="content-box" id="fasilitas">
+      <h2>FASILITAS</h2>
+
+      <div class="facility-grid">
+
+        <div class="facility">
+          <i class="fa-solid fa-toilet"></i>
+          <h4>Toilet</h4>
+        </div>
+
+        <div class="facility">
+          <i class="fa-solid fa-burger"></i>
+          <h4>Food Court</h4>
+        </div>
+
+        <div class="facility">
+          <i class="fa-solid fa-shirt"></i>
+          <h4>Merchandise</h4>
+        </div>
+
+        <div class="facility">
+          <i class="fa-solid fa-square-parking"></i>
+          <h4>Parking Area</h4>
+        </div>
+
+        <div class="facility">
+          <i class="fa-solid fa-kit-medical"></i>
+          <h4>Medical</h4>
+        </div>
+
+        <div class="facility">
+          <i class="fa-solid fa-camera"></i>
+          <h4>Photo Spot</h4>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 POLIPONI BALI • Powered by PT. AMAZING LETRALIVE
+  </footer>
+
 </div>
-
-<h1>
-Paket Bundling Tiket Sheila On 7 Bali 2026 Resmi Dibuka
-</h1>
-
-<p class="subtitle">
-Nikmati pengalaman konser terbaik bersama Sheila On 7 dalam event spesial POLIPONI BALI 2026 yang akan diselenggarakan di Bali United Training Center. Paket bundling ini memberikan keuntungan lebih untuk para penonton dengan akses tiket prioritas, merchandise eksklusif, serta benefit tambahan yang hanya tersedia dalam periode pembelian terbatas.
-</p>
-
-<div class="info-box">
-
-<div class="info-item">
-<div class="label">EVENT</div>
-<div class="value">POLIPONI BALI 2026</div>
-</div>
-
-<div class="info-item">
-<div class="label">SPECIAL PERFORMANCE</div>
-<div class="value">Sheila On 7 • Dialog Dini Hari • 510</div>
-</div>
-
-<div class="info-item">
-<div class="label">LOKASI</div>
-<div class="value">Bali United Training Center</div>
-</div>
-
-<div class="info-item">
-<div class="label">TANGGAL</div>
-<div class="value">04 Juli 2026</div>
-</div>
-
-<div class="info-item">
-<div class="label">PROMOTED BY</div>
-<div class="value">LETRALIVE</div>
-</div>
-
-</div>
-
-<div class="fake-wait">
-
-<h3>
-Antrian Pembelian Tiket Bundling
-</h3>
-
-<p>
-Sedang terjadi lonjakan pembelian tiket konser Sheila On 7 Bali 2026.
-Estimasi waktu tunggu:
-</p>
-
-<div class="fake-time" id="countdown">
-02:00:00
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>
-Deskripsi Event
-</h2>
-
-<p>
-POLIPONI BALI 2026 merupakan salah satu rangkaian konser dan hiburan terbesar tahun 2026 yang menghadirkan pengalaman live performance dengan konsep modern, visual interaktif, serta lineup musisi pilihan Indonesia.
-</p>
-
-<p>
-Dalam pembukaan penjualan kali ini, tersedia <span class="highlight">Paket Bundling Sheila On 7</span> yang menjadi kategori paling diminati oleh pengunjung karena menghadirkan berbagai benefit eksklusif untuk penonton yang ingin menikmati konser dengan pengalaman terbaik.
-</p>
-
-<p>
-Event ini akan berlangsung di Bali United Training Center dengan kapasitas penonton terbatas dan sistem penjualan online resmi. Seluruh pembelian tiket dilakukan secara digital dan setiap transaksi akan mendapatkan kode booking otomatis setelah pembayaran berhasil diverifikasi.
-</p>
-
-<p>
-Selain penampilan spesial dari Sheila On 7, acara ini juga akan dimeriahkan oleh penampilan musisi lainnya seperti Dialog Dini Hari dan 510 yang siap menghadirkan suasana konser penuh energi dan nostalgia.
-</p>
-
-<p>
-Paket bundling ini dirancang khusus untuk mempermudah penonton mendapatkan tiket prioritas tanpa harus melakukan pembelian terpisah. Tiket bundling juga memberikan akses lebih cepat saat proses check-in event berlangsung.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>
-Benefit Paket Bundling
-</h2>
-
-<ul class="rules">
-<li>Akses pembelian tiket prioritas konser Sheila On 7 Bali 2026.</li>
-
-<li>Kesempatan mendapatkan merchandise event eksklusif selama persediaan masih tersedia.</li>
-
-<li>QR digital ticket otomatis setelah pembayaran berhasil diverifikasi.</li>
-
-<li>Akses jalur fast check-in pada area event tertentu.</li>
-
-<li>Benefit bundling lebih hemat dibanding pembelian satuan.</li>
-
-<li>Kesempatan mengikuti giveaway official merchandise selama periode event berlangsung.</li>
-</ul>
-
-</div>
-
-<div class="section">
-
-<h2>
-Syarat dan Ketentuan
-</h2>
-
-<ul class="rules">
-
-<li>
-Pembelian tiket bundling hanya berlaku selama kuota masih tersedia.
-</li>
-
-<li>
-Setiap pembeli wajib mengisi data pemesanan dengan benar dan lengkap.
-</li>
-
-<li>
-Tiket yang sudah dibeli tidak dapat dibatalkan ataupun diuangkan kembali.
-</li>
-
-<li>
-Panitia tidak bertanggung jawab atas kesalahan pengisian data oleh pembeli.
-</li>
-
-<li>
-QR Ticket wajib ditunjukkan saat memasuki area event.
-</li>
-
-<li>
-Dilarang memperjualbelikan tiket di luar platform resmi.
-</li>
-
-<li>
-Pihak penyelenggara berhak melakukan perubahan teknis apabila diperlukan demi kelancaran acara.
-</li>
-
-<li>
-Dengan melakukan pembelian tiket, pembeli dianggap telah memahami dan menyetujui seluruh syarat dan ketentuan yang berlaku.
-</li>
-
-</ul>
-
-</div>
-
-<a href="https://poliponii2026.github.io/CATEGORY-POLIPONI/" class="buy-btn">
-BELI TIKET BUNDLING
-</a>
-
-<div class="footer">
-© 2026 POLIPONI BALI • Ticketing Partner by Artatix
-</div>
-
-</div>
-</div>
-
-<script>
-
-let fakeHours = 2;
-let fakeMinutes = 0;
-let fakeSeconds = 0;
-
-function updateCountdown(){
-
-const countdown = document.getElementById("countdown");
-
-if(fakeSeconds === 0){
-if(fakeMinutes === 0){
-if(fakeHours !== 0){
-fakeHours--;
-fakeMinutes = 59;
-fakeSeconds = 59;
-}
-}else{
-fakeMinutes--;
-fakeSeconds = 59;
-}
-}else{
-fakeSeconds--;
-}
-
-let h = String(fakeHours).padStart(2,'0');
-let m = String(fakeMinutes).padStart(2,'0');
-let s = String(fakeSeconds).padStart(2,'0');
-
-countdown.innerHTML = `${h}:${m}:${s}`;
-
-}
-
-setInterval(updateCountdown, 3000);
-
-setTimeout(() => {
-window.location.href = "https://poliponii2026.github.io/CATEGORY-POLIPONI/";
-}, 300000);
-
-</script>
 
 </body>
 </html>
