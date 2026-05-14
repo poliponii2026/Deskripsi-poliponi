@@ -8,13 +8,15 @@
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- ICON -->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -24,8 +26,8 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background:#0b0b0b;
-      color:white;
+      background:#f5f5f5;
+      color:#111;
       overflow-x:hidden;
     }
 
@@ -38,192 +40,196 @@
       width:100%;
       max-width:900px;
       margin:auto;
-      background:#121212;
+      background:white;
       min-height:100vh;
     }
 
     /* BANNER */
-    .banner{
-      width:100%;
-      position:relative;
-    }
 
     .banner img{
       width:100%;
       display:block;
-      object-fit:cover;
+      border-bottom-left-radius:30px;
+      border-bottom-right-radius:30px;
     }
 
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,.9), transparent);
+    /* TITLE */
+
+    .main-title{
+      padding:30px 24px 10px;
     }
 
-    .title-box{
-      position:absolute;
-      bottom:25px;
-      left:25px;
-    }
-
-    .title-box h1{
-      font-size:38px;
+    .main-title h1{
+      font-size:36px;
       font-weight:800;
-      line-height:1.1;
+      line-height:1.2;
+      color:#111;
     }
 
-    .title-box span{
-      color:#00d4ff;
+    .main-title span{
+      color:#00b7ff;
     }
 
-    /* SECTION */
     section{
-      padding:28px 22px;
+      padding:20px;
     }
+
+    /* CARD */
 
     .card{
-      background:#1a1a1a;
-      border-radius:22px;
-      padding:22px;
+      background:white;
+      border-radius:24px;
+      padding:24px;
       margin-bottom:20px;
-      border:1px solid rgba(255,255,255,.06);
-      box-shadow:0 0 20px rgba(0,0,0,.25);
+      border:1px solid #ececec;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
     }
 
     .section-title{
       font-size:22px;
       font-weight:700;
       margin-bottom:20px;
+      color:#111;
     }
 
     /* DETAIL */
+
     .detail-item{
       display:flex;
-      align-items:flex-start;
       gap:16px;
-      margin-bottom:18px;
+      margin-bottom:20px;
+      align-items:flex-start;
     }
 
     .detail-item i{
-      width:45px;
-      height:45px;
-      background:#00d4ff;
-      color:#000;
-      border-radius:14px;
+      width:48px;
+      height:48px;
+      background:#00c8ff;
+      color:white;
+      border-radius:16px;
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:18px;
-      font-weight:bold;
       flex-shrink:0;
     }
 
     .detail-item h4{
-      font-size:15px;
-      opacity:.7;
-      margin-bottom:3px;
+      font-size:14px;
+      color:#666;
+      margin-bottom:4px;
     }
 
     .detail-item p{
       font-size:17px;
       font-weight:600;
+      color:#111;
     }
 
-    /* PENYELENGGARA */
+    /* ORGANIZER */
+
     .organizer{
       display:flex;
       align-items:center;
-      gap:12px;
+      gap:14px;
     }
 
     .organizer-logo{
-      width:34px;
-      height:34px;
-      border-radius:10px;
-      background:#00d4ff;
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:#00c8ff;
       display:flex;
       align-items:center;
       justify-content:center;
-      color:black;
-      font-weight:800;
-      font-size:12px;
+      color:white;
+      font-weight:700;
+      font-size:13px;
     }
 
-    /* SOSMED */
+    /* SOCIAL */
+
     .socials{
       display:flex;
-      gap:18px;
+      gap:16px;
       margin-top:10px;
     }
 
     .socials a{
-      width:55px;
-      height:55px;
+      width:58px;
+      height:58px;
       border-radius:18px;
+      background:#f2f2f2;
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:24px;
-      background:#1f1f1f;
       transition:.3s;
-      border:1px solid rgba(255,255,255,.07);
+      border:1px solid #e8e8e8;
     }
 
     .socials a:hover{
+      background:#00c8ff;
+      color:white;
       transform:translateY(-4px);
-      background:#00d4ff;
-      color:black;
     }
 
-    /* NAV TAB */
+    /* MENU */
+
     .menu-tabs{
       display:flex;
       gap:12px;
       overflow:auto;
-      margin-bottom:20px;
+      margin-bottom:24px;
+      padding-bottom:4px;
     }
 
     .menu-tabs a{
-      background:#1f1f1f;
+      background:#f3f3f3;
       padding:14px 20px;
-      border-radius:16px;
+      border-radius:18px;
       white-space:nowrap;
       font-size:14px;
       font-weight:600;
-      border:1px solid rgba(255,255,255,.05);
       transition:.3s;
+      border:1px solid #ececec;
     }
 
     .menu-tabs a:hover{
-      background:#00d4ff;
-      color:black;
+      background:#00c8ff;
+      color:white;
     }
 
     /* CONTENT */
+
     .content-box{
-      background:#181818;
-      border-radius:20px;
+      background:white;
+      border-radius:24px;
       padding:24px;
-      margin-bottom:20px;
-      border:1px solid rgba(255,255,255,.06);
+      margin-bottom:22px;
+      border:1px solid #ececec;
+      box-shadow:0 8px 20px rgba(0,0,0,.04);
     }
 
     .content-box h2{
-      margin-bottom:16px;
-      font-size:24px;
+      margin-bottom:18px;
+      font-size:25px;
+      color:#111;
     }
 
     .content-box p{
-      line-height:1.8;
-      opacity:.92;
+      line-height:1.9;
+      color:#444;
     }
 
     ul{
       padding-left:20px;
       line-height:2;
+      color:#444;
     }
 
     /* FASILITAS */
+
     .facility-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
@@ -232,18 +238,18 @@
     }
 
     .facility{
-      background:#202020;
-      border-radius:20px;
-      padding:22px 14px;
+      background:#fafafa;
+      border-radius:22px;
+      padding:24px 14px;
       text-align:center;
-      border:1px solid rgba(255,255,255,.06);
+      border:1px solid #ededed;
       transition:.3s;
     }
 
     .facility:hover{
+      background:#00c8ff;
+      color:white;
       transform:translateY(-5px);
-      background:#00d4ff;
-      color:black;
     }
 
     .facility i{
@@ -253,20 +259,24 @@
 
     .facility h4{
       font-size:14px;
+      font-weight:600;
     }
 
     footer{
       text-align:center;
-      padding:30px;
-      opacity:.5;
+      padding:40px 20px;
+      color:#777;
       font-size:13px;
     }
 
     @media(max-width:600px){
-      .title-box h1{
+
+      .main-title h1{
         font-size:28px;
       }
+
     }
+
   </style>
 </head>
 <body>
@@ -276,20 +286,25 @@
   <!-- BANNER -->
   <div class="banner">
     <img src="banner-saya.png" alt="Banner Event">
-    <div class="overlay"></div>
-
-    <div class="title-box">
-      <h1>POLIPONI 2026 <span>- BALI</span></h1>
-    </div>
   </div>
 
-  <!-- DETAIL ACARA -->
+  <!-- TITLE -->
+  <div class="main-title">
+    <h1>POLIPONI 2026 <span>- BALI</span></h1>
+  </div>
+
   <section>
+
+    <!-- DETAIL -->
     <div class="card">
-      <div class="section-title">DETAIL ACARA</div>
+
+      <div class="section-title">
+        DETAIL ACARA
+      </div>
 
       <div class="detail-item">
         <i class="fa-solid fa-calendar"></i>
+
         <div>
           <h4>Tanggal</h4>
           <p>04 Juli 2026</p>
@@ -298,6 +313,7 @@
 
       <div class="detail-item">
         <i class="fa-solid fa-clock"></i>
+
         <div>
           <h4>Jam</h4>
           <p>14.00 - 23.00 WITA</p>
@@ -306,94 +322,133 @@
 
       <div class="detail-item">
         <i class="fa-solid fa-location-dot"></i>
+
         <div>
           <h4>Lokasi</h4>
           <p>BALI UNITED TRAINING CENTER</p>
         </div>
       </div>
+
     </div>
 
     <!-- PENYELENGGARA -->
     <div class="card">
-      <div class="section-title">PENYELENGGARA</div>
+
+      <div class="section-title">
+        PENYELENGGARA
+      </div>
 
       <div class="organizer">
-        <div class="organizer-logo">AL</div>
+
+        <div class="organizer-logo">
+          AL
+        </div>
+
         <div>
           <h3>PT. AMAZING LETRALIVE</h3>
         </div>
+
       </div>
+
     </div>
 
     <!-- SOSMED -->
     <div class="card">
-      <div class="section-title">MEDIA SOSIAL</div>
+
+      <div class="section-title">
+        MEDIA SOSIAL
+      </div>
 
       <div class="socials">
-        <a href="#" target="_blank">
+
+        <a href="#">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="#" target="_blank">
+        <a href="#">
           <i class="fa-brands fa-tiktok"></i>
         </a>
+
       </div>
+
     </div>
 
     <!-- MENU -->
     <div class="menu-tabs">
-      <a href="#deskripsi">DESKRIPSI</a>
-      <a href="#syarat">SYARAT & KETENTUAN</a>
-      <a href="#fasilitas">FASILITAS</a>
+
+      <a href="#deskripsi">
+        DESKRIPSI
+      </a>
+
+      <a href="#syarat">
+        SYARAT & KETENTUAN
+      </a>
+
+      <a href="#fasilitas">
+        FASILITAS
+      </a>
+
     </div>
 
     <!-- DESKRIPSI -->
     <div class="content-box" id="deskripsi">
+
       <h2>DESKRIPSI</h2>
 
       <p>
-        POLIPONI 2026 hadir sebagai salah satu festival musik paling meriah di Bali 
-        dengan menghadirkan line-up terbaik Indonesia seperti Sheila On 7, Hindia, 
-        Feast, 510, dan Dialog Dini Hari.
+        POLIPONI 2026 hadir sebagai festival musik spektakuler di Bali
+        dengan menghadirkan line-up terbaik Indonesia seperti Sheila On 7,
+        Hindia, Feast, 510, dan Dialog Dini Hari.
       </p>
 
       <br>
 
       <p>
-        Event ini akan diselenggarakan di Bali United Training Center pada 
-        tanggal 04 Juli 2026 mulai pukul 14.00 WITA hingga selesai. 
-        Nikmati pengalaman konser spektakuler dengan tata panggung modern, 
-        lighting megah, area kuliner, merchandise official, dan berbagai 
-        aktivitas seru lainnya.
+        Acara ini akan berlangsung di Bali United Training Center pada
+        tanggal 04 Juli 2026 mulai pukul 14.00 WITA hingga selesai.
+        Nikmati konser megah dengan tata panggung modern, lighting spektakuler,
+        area kuliner, merchandise official, dan berbagai aktivitas menarik.
       </p>
 
       <br>
 
       <p>
-        Jangan lewatkan momen spesial bersama ribuan penonton lainnya 
-        dalam festival musik POLIPONI 2026 - BALI.
+        Jangan lewatkan pengalaman konser terbaik bersama ribuan penonton
+        lainnya di POLIPONI 2026 - BALI.
       </p>
+
     </div>
 
     <!-- SYARAT -->
     <div class="content-box" id="syarat">
+
       <h2>SYARAT & KETENTUAN</h2>
 
       <ul>
+
         <li>Tiket yang sudah dibeli tidak dapat dikembalikan.</li>
+
         <li>Wajib menunjukkan e-ticket saat penukaran tiket.</li>
-        <li>Penonton wajib menjaga keamanan dan ketertiban acara.</li>
+
         <li>Dilarang membawa senjata tajam, narkoba, dan minuman keras.</li>
+
         <li>Dilarang membawa makanan dan minuman dari luar venue.</li>
-        <li>Pihak penyelenggara berhak menolak masuk apabila melanggar aturan.</li>
+
         <li>Tiket hanya berlaku untuk 1 orang.</li>
-        <li>Pengunjung wajib mengikuti seluruh peraturan venue.</li>
+
+        <li>Pihak penyelenggara berhak menolak pengunjung yang melanggar aturan.</li>
+
+        <li>Pengunjung wajib menjaga keamanan dan ketertiban acara.</li>
+
         <li>Acara dapat berubah sewaktu-waktu sesuai kondisi.</li>
+
       </ul>
+
     </div>
 
     <!-- FASILITAS -->
     <div class="content-box" id="fasilitas">
+
       <h2>FASILITAS</h2>
 
       <div class="facility-grid">
@@ -415,7 +470,7 @@
 
         <div class="facility">
           <i class="fa-solid fa-square-parking"></i>
-          <h4>Parking Area</h4>
+          <h4>Parking</h4>
         </div>
 
         <div class="facility">
@@ -429,6 +484,7 @@
         </div>
 
       </div>
+
     </div>
 
   </section>
