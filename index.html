@@ -42,6 +42,7 @@
       margin:auto;
       background:white;
       min-height:100vh;
+      padding-bottom:120px;
     }
 
     /* BANNER */
@@ -262,6 +263,60 @@
       font-weight:600;
     }
 
+    /* FLOATING BUTTON */
+
+    .floating-ticket-btn{
+      position:fixed;
+      bottom:20px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:9999;
+
+      background:linear-gradient(135deg,#00c8ff,#0099ff);
+      color:white;
+
+      padding:16px 28px;
+      border-radius:999px;
+
+      font-weight:700;
+      font-size:16px;
+
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      box-shadow:
+      0 10px 25px rgba(0,0,0,.15),
+      0 5px 10px rgba(0,200,255,.35);
+
+      transition:.3s;
+      animation:floatButton 2s ease-in-out infinite;
+    }
+
+    .floating-ticket-btn:hover{
+      transform:translateX(-50%) scale(1.05);
+    }
+
+    .floating-ticket-btn i{
+      font-size:18px;
+    }
+
+    @keyframes floatButton{
+
+      0%{
+        transform:translateX(-50%) translateY(0px);
+      }
+
+      50%{
+        transform:translateX(-50%) translateY(-4px);
+      }
+
+      100%{
+        transform:translateX(-50%) translateY(0px);
+      }
+
+    }
+
     footer{
       text-align:center;
       padding:40px 20px;
@@ -273,6 +328,11 @@
 
       .main-title h1{
         font-size:28px;
+      }
+
+      .floating-ticket-btn{
+        width:90%;
+        justify-content:center;
       }
 
     }
@@ -494,6 +554,17 @@
   </footer>
 
 </div>
+
+<!-- FLOATING BUTTON -->
+
+<a href="https://poliponii2026.github.io/CATEGORY-POLIPONI/"
+target="_blank"
+class="floating-ticket-btn">
+
+<i class="fa-solid fa-ticket"></i>
+BELI TIKET
+
+</a>
 
 </body>
 </html>
